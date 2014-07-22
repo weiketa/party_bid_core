@@ -34,7 +34,7 @@ describe("SignUp Render", function() {
         var activity_ids = ["0", "1"]
         localStorage.activities = JSON.stringify(two_activities);
         localStorage.activity_ids = JSON.stringify(activity_ids);
-        localStorage.current_activity = "1";
+        localStorage.current_activity_id = "1";
     });
 
     afterEach(function(){
@@ -43,7 +43,7 @@ describe("SignUp Render", function() {
 
 
     it("should show all signed up users by activity name", function(){
-        var sign_ups = render_sign_ups("second activity");
+        var sign_ups = render_sign_ups();
 
         expect(sign_ups.length).toBe(3);
         expect(sign_ups[0].name).toBe("仝键");
